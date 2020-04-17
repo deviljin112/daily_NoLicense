@@ -1,6 +1,12 @@
-ESX                           = nil
+ESX               = nil
 
-local Licenses                = {}
+
+---- CHANGE THE TEXT HERE TO YOUR LANGUAGE ----
+local message     = "~r~Nie masz prawa jazdy! Idz je zrobic zanim zlapie cie policja!"
+---- CHANGE THE TEXT HERE TO YOUR LANGUAGE ----
+
+
+local Licenses    = {}
 
 Citizen.CreateThread(function()
   while ESX == nil do
@@ -16,26 +22,21 @@ AddEventHandler('NoLicense:loadLicenses', function (licenses)
     end
 end)
 
-
-
 Citizen.CreateThread(function()
     while true do
-      
       Citizen.Wait(1)
 
-      TriggerEvent('esx_license:getLicenses', source, function (licenses)
-        TriggerEvent('NoLicense:loadLicenses', source, licenses)
-      end)
+      if(IsPedInAnyVehicle(GetPlayerPed(-1), false)) then
+        TriggerEvent('esx_license:getLicenses', source, function (licenses)
+          TriggerEvent('NoLicense:loadLicenses', source, licenses)
+        end)
 
-      Citizen.Wait(1)
- 
-      if(IsPedInAnyVehicle(GetPlayerPed(-1), false)) and (not Licenses['dmv'] or not Licenses['drive']) and CurrentTest ~= 'drive' then
+        Citizen.Wait(1)
 
-        ---- CHANGE THE TEXT HERE TO YOUR LANGUAGE ----
-        DrawMissionText("~r~Nie masz prawa jazdy! Idz je zrobic zanim zlapie cie policja!", 2000)
-
+        if (not Licenses['dmv'] or not Licenses['drive']) and CurrentTest ~= 'drive' then
+          DrawMissionText(message, 2000)
+        end
       end
-
     end
 end)
 
