@@ -12,8 +12,6 @@ Uses:
 
 EDIT: esx_dmvschool is not a must as long as you have another script that uses "dmv" and "drive" as license names (names can be edited line 32 in client.lua)
 
-EDIT2: You can change the message in client.lua at the top
-
 
 # No License PL
 Prosty Skrypt na sprawdzanie czy gracz posiada prawo jazdy, jak nie ma pokazuje informacje ze musi je zrobic...
@@ -28,5 +26,3 @@ Uzywa:
   - [esx_dmvschool](https://github.com/ESX-Org/esx_dmvschool/blob/master/esx_dmvschool.sql)
 
 EDIT: esx_dmvschool nie jest wymagane o ile korzystasz z innego skryptu ktory uzywa licencje "dmv" i "drive" (nazwy moga byc zmienione na linijce 32 w client.lua)
-
-EDIT2: Mozesz zmienic wiadomosc w client.lua na samej gorze

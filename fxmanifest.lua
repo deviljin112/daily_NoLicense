@@ -1,6 +1,6 @@
-fx_version 'bodacious'
+fx_version 'adamant'
 
-games { 'gta5'}
+game 'gta5'
 
 author 'Dev'
 description 'No-License Message in a car'
