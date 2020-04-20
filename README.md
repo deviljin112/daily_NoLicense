@@ -16,7 +16,7 @@ EDIT: esx_dmvschool is not a must as long as you have another script that uses "
 # daily_NoLicense PL
 Prosty Skrypt na sprawdzanie czy gracz posiada prawo jazdy, jak nie ma pokazuje informacje ze musi je zrobic...
 
-Jak masz pomysl jak cos poprawic lub zoptymalizowac zrob PC (Mi sie nie chce go optymalizowac... jestem leniwy)
+Jak masz pomysl jak cos poprawic lub zoptymalizowac zrob PR (Mi sie nie chce go optymalizowac... jestem leniwy)
 
 Na podobie:
   - [esx_weashops](https://github.com/ESX-Org/esx_weashops)
